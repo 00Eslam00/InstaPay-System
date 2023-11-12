@@ -20,7 +20,7 @@ public class InstaPayApplication extends Application {
         Page p = null;
 
         do {
-            List<String> options = pageFactory.createOptions(option);
+            List<String> options = pageFactory.createOptions(token);
             for (String op : options) {
                 System.out.println(op);
             }
