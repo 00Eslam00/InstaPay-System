@@ -119,9 +119,9 @@ public class DataBaseV1 extends DataBaseRepo {
     }
 
     @Override
-    public Boolean updateUserProvider(UserProvider user, Function<UserProvider, Boolean> func) {
+    public Boolean updateUserProvider(UserProvider user) {
         for (int i = 0; i < dummyUsersProvider.size(); i++) {
-            if (func.apply(dummyUsersProvider.get(i))) {
+            if (user.mobileNum.equals(dummyUsersProvider.get(i).mobileNum)) {
                 dummyUsersProvider.remove(i);
                 dummyUsersProvider.add(user);
                 return true;

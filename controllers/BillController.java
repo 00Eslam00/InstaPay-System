@@ -5,6 +5,7 @@ import enums.BillStat;
 import enums.BillType;
 import interfaces.GetBillBehavior;
 import interfaces.PayBillBehavior;
+import models.UserProvider;
 import repository.DataBaseRepo;
 
 public class BillController implements PayBillBehavior, GetBillBehavior {
@@ -22,7 +23,7 @@ public class BillController implements PayBillBehavior, GetBillBehavior {
 
     @Override
     public BillStat payBill(String token, Bill bill, BillType billtType) {
-        throw new UnsupportedOperationException("Unimplemented method 'payBill'");
+
     }
 
 }

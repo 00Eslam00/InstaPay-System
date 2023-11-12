@@ -19,6 +19,6 @@ abstract public class DataBaseRepo {
 
     abstract public UserProvider getUserProvider(Function<UserProvider, Boolean> func);
 
-    abstract public Boolean updateUserProvider(UserProvider user, Function<UserProvider, Boolean> func);
+    abstract public Boolean updateUserProvider(UserProvider user);
 
 }
