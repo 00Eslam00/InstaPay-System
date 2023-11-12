@@ -21,6 +21,7 @@ public class MoneyController implements BalanceBehavior, TransferMoneyBehavior {
     @Override
     public PaymentStat transferMoney(String token, String desMobile, double amount) {
         throw new UnsupportedOperationException("Unimplemented method 'transferMoney'");
+        db.getUserProvider(null)
     }
 
 }
