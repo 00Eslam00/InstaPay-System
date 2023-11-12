@@ -14,11 +14,11 @@ import models.UserProvider;
 
 public class DataBaseV1 extends DataBaseRepo {
 
-    LinkedList<Bill> dummyGasBill;
-    LinkedList<Bill> dummyElectricityBills;
-    LinkedList<Bill> dummyWaterBillBills;
-    LinkedList<User> dummyUsers;
-    LinkedList<UserProvider> dummyUsersProvider;
+    LinkedList<Bill> dummyGasBill = new LinkedList<Bill>();
+    LinkedList<Bill> dummyElectricityBills = new LinkedList<Bill>();
+    LinkedList<Bill> dummyWaterBillBills = new LinkedList<Bill>();
+    LinkedList<User> dummyUsers = new LinkedList<User>();
+    LinkedList<UserProvider> dummyUsersProvider = new LinkedList<UserProvider>();
 
     public DataBaseV1() {
 

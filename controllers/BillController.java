@@ -23,7 +23,8 @@ public class BillController implements PayBillBehavior, GetBillBehavior {
 
     @Override
     public BillStat payBill(String token, Bill bill, BillType billtType) {
-
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'payBill'");
     }
 
 }
