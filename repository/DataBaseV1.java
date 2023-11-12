@@ -57,6 +57,7 @@ public class DataBaseV1 extends DataBaseRepo {
         return null;
     }
 
+
     @Override
     public Bill getBill(BillType billtype, Function<Bill, Boolean> func) {
         LinkedList<Bill> dummyBills = null;
