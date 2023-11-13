@@ -3,7 +3,9 @@ package classes;
 import java.time.LocalDateTime;
 
 public class ElectricityBill extends Bill {
-
+    String billContent;
+    String mob=getUserNum();
+    double cost=getCost();
     public ElectricityBill(double cost, String userNum, LocalDateTime localDateTime) {
         super(cost, userNum, localDateTime);
     }

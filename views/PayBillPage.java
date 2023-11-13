@@ -1,7 +1,11 @@
 package views;
 
+import classes.Bill;
+import enums.BillType;
 import interfaces.GetBillBehavior;
 import interfaces.PayBillBehavior;
+
+import java.util.Scanner;
 
 public class PayBillPage extends Page {
 
@@ -15,7 +19,17 @@ public class PayBillPage extends Page {
 
     @Override
     public void show() {
-        throw new UnsupportedOperationException("Unimplemented method 'show'");
-    }
+        System.out.println("Enter the bill type");
+        Scanner in = new Scanner(System.in);
+        String option = in.nextLine().toUpperCase();
 
+        BillType type = BillType.valueOf(option);
+
+
+        Bill myBill=gb.getBillDetails(type,app.token);
+        System.out.println(myBill.getBillContent());
+
+
+
+    }
 }
