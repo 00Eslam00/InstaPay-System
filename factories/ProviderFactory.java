@@ -7,7 +7,7 @@ import models.UserProvider;
 
 public class ProviderFactory {
 
-    public MoneyProvider create(UserProvider srcProvider) {
+    public static MoneyProvider create(UserProvider srcProvider) {
 
         switch (srcProvider.accountType) {
             case BANK:

@@ -36,7 +36,7 @@ public class InstaPayApplication extends Application {
             System.out.flush();
             System.out.println("--------------- " + option + " ---------------");
             p.show();
-            System.err.print("\npress Enter to return to main menu: ");
+            System.out.print("\npress Enter to return to main menu: ");
             scanner.nextLine();
             System.out.print("\033[H\033[2J");
             System.out.flush();
