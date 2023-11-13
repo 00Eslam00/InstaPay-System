@@ -18,7 +18,7 @@ public class BillController implements PayBillBehavior, GetBillBehavior {
 
     @Override
     public Bill getBillDetails(BillType billType, String mobile) {
-        throw new UnsupportedOperationException("Unimplemented method 'getBillDetails'");
+        return db.getBill(billType, bill -> bill.getUserNum().equals(mobile));
     }
 
     @Override
