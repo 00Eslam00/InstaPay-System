@@ -28,7 +28,7 @@ public class PageFactory {
         if (pageName.equals("exit"))
             return null;
 
-        DataBaseRepo db = new DataBaseV1();
+        DataBaseRepo db = DataBaseV1.getDB();
 
         if (isValidToekn(token)) {
             if (pageName.equals("balance"))

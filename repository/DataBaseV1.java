@@ -14,13 +14,23 @@ import models.UserProvider;
 
 public class DataBaseV1 extends DataBaseRepo {
 
-    LinkedList<Bill> dummyGasBill = new LinkedList<Bill>();
-    LinkedList<Bill> dummyElectricityBills = new LinkedList<Bill>();
-    LinkedList<Bill> dummyWaterBillBills = new LinkedList<Bill>();
-    LinkedList<User> dummyUsers = new LinkedList<User>();
-    LinkedList<UserProvider> dummyUsersProvider = new LinkedList<UserProvider>();
+    private LinkedList<Bill> dummyGasBill = new LinkedList<Bill>();
+    private LinkedList<Bill> dummyElectricityBills = new LinkedList<Bill>();
+    private LinkedList<Bill> dummyWaterBillBills = new LinkedList<Bill>();
+    private LinkedList<User> dummyUsers = new LinkedList<User>();
+    private LinkedList<UserProvider> dummyUsersProvider = new LinkedList<UserProvider>();
 
-    public DataBaseV1() {
+    private static DataBaseV1 db = null;
+
+    public static DataBaseV1 getDB() {
+        if (db == null) {
+            db = new DataBaseV1();
+        }
+
+        return db;
+    }
+
+    private DataBaseV1() {
 
         dummyGasBill.add(new GasBill(122, "01112345678", LocalDateTime.of(2022, 11, 2, 11, 12)));
 
