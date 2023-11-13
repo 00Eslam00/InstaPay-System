@@ -18,7 +18,7 @@ public class MoneyController implements BalanceBehavior, TransferMoneyBehavior {
         UserProvider user = db.getUserProvider(usp -> usp.mobileNum.equals(token));
         if (user == null)
             return 0;
-        return user.balane;
+        return user.balance;
     }
 
     @Override

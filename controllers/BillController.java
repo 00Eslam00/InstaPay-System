@@ -26,7 +26,7 @@ public class BillController implements PayBillBehavior, GetBillBehavior {
 
         UserProvider usp = db.getUserProvider(us -> us.mobileNum.equals(token));
 
-        usp.balane -= bill.getCost();
+        usp.balance -= bill.getCost();
         db.updateUserProvider(usp);
         db.removeBill(billtType, mybill -> mybill.getUserNum().equals(bill.getUserNum()));
 
