@@ -5,7 +5,6 @@ import enums.BillStat;
 import enums.BillType;
 import interfaces.GetBillBehavior;
 import interfaces.PayBillBehavior;
-import models.UserProvider;
 import repository.DataBaseRepo;
 
 public class BillController implements PayBillBehavior, GetBillBehavior {

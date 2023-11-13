@@ -33,9 +33,9 @@ public class DataBaseV1 extends DataBaseRepo {
         dummyUsersProvider.add(new UserProvider("01012335678", AccountType.WALLLET, 600));
         dummyUsersProvider.add(new UserProvider("01112345678", AccountType.BANK, 1000));
 
-        dummyUsers.add(new User("01212345678", "test@instapay", AccountType.BANK, "ayhaga@gmail.com", "password"));
+        dummyUsers.add(new User("01212345678", "test", AccountType.BANK, "ayhaga@gmail.com", "password"));
         dummyUsers
-                .add(new User("01012345678", "test2@instapay", AccountType.WALLLET, "ayhaga2@gmail.com", "password2"));
+                .add(new User("01012345678", "test2", AccountType.WALLLET, "ayhaga2@gmail.com", "password2"));
 
     }
 
@@ -56,7 +56,6 @@ public class DataBaseV1 extends DataBaseRepo {
         }
         return null;
     }
-
 
     @Override
     public Bill getBill(BillType billtype, Function<Bill, Boolean> func) {

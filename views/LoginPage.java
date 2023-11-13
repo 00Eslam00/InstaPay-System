@@ -15,18 +15,18 @@ public class LoginPage extends Page {
 
     @Override
     public void show() {
-         Scanner scanner = new Scanner(System.in);
-         String userName, password;
-         System.out.print("Enter your username number : ");
-         userName = scanner.nextLine();
-         System.out.print("Enter your password : ");
-         password = scanner.nextLine();
-         LogUser user = new LogUser(userName, password);
-         app.setToken(lb.Login(user));
-         if(app.token == null)
-             System.out.print("Invalid username or password");
-         else
-             System.out.print("Logged in successfully");
+        Scanner scanner = new Scanner(System.in);
+        String userName, password;
+        System.out.print("Enter your username : ");
+        userName = scanner.nextLine();
+        System.out.print("Enter your password : ");
+        password = scanner.nextLine();
+        LogUser user = new LogUser(userName, password);
+        app.setToken(lb.Login(user));
+        if (app.token == null)
+            System.out.print("Invalid username or password");
+        else
+            System.out.print("Logged in successfully");
     }
 
 }
