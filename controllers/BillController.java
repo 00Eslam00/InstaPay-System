@@ -29,7 +29,7 @@ public class BillController implements PayBillBehavior, GetBillBehavior {
         usp.balane -= bill.getCost();
         db.updateUserProvider(usp);
         db.removeBill(billtType, mybill -> mybill.getUserNum().equals(bill.getUserNum()));
-
+        
         throw new UnsupportedOperationException("Unimplemented method 'payBill'");
     }
 
