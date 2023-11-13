@@ -5,12 +5,12 @@ import enums.AccountType;
 public class UserProvider {
     public String mobileNum;
     public AccountType accountType;
-    public double balane;
+    public double balance;
 
-    public UserProvider(String mobileNum, AccountType accountType, double balane) {
+    public UserProvider(String mobileNum, AccountType accountType, double balance) {
         this.mobileNum = mobileNum;
         this.accountType = accountType;
-        this.balane = balane;
+        this.balance = balance;
     }
 
 }
