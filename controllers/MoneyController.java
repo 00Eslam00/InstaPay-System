@@ -2,6 +2,7 @@ package controllers;
 
 import enums.PaymentStat;
 import interfaces.*;
+import models.UserProvider;
 import repository.DataBaseRepo;
 
 public class MoneyController implements BalanceBehavior, TransferMoneyBehavior {
@@ -14,8 +15,10 @@ public class MoneyController implements BalanceBehavior, TransferMoneyBehavior {
 
     @Override
     public double getBalance(String token) {
-        throw new UnsupportedOperationException("Unimplemented method 'getBalance'");
-        
+        UserProvider user = db.getUserProvider(usp -> usp.mobileNum.equals(token));
+        if (user == null)
+            return 0;
+        return user.balane;
     }
 
     @Override

@@ -24,6 +24,13 @@ public class BillController implements PayBillBehavior, GetBillBehavior {
     @Override
     public BillStat payBill(String token, Bill bill, BillType billtType) {
 
+        UserProvider usp = db.getUserProvider(us -> us.mobileNum.equals(token));
+
+        usp.balane -= bill.getCost();
+        db.updateUserProvider(usp);
+        db.removeBill(billtType, mybill -> mybill.getUserNum().equals(bill.getUserNum()));
+
+        throw new UnsupportedOperationException("Unimplemented method 'payBill'");
     }
 
 }

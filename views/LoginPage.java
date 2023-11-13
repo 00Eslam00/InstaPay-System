@@ -1,6 +1,9 @@
 package views;
 
 import interfaces.LoginBehavior;
+import models.LogUser;
+
+import java.util.Scanner;
 
 public class LoginPage extends Page {
 
@@ -12,19 +15,18 @@ public class LoginPage extends Page {
 
     @Override
     public void show() {
-        // LogUser userCred;
-        // Scanner scanner = new Scanner(System.in);
-        // String num;
-        // String pass;
-        // System.out.print("Enter your phone number : ");
-        // num = scanner.nextLine();
-        // System.out.print("Enter your password : ");
-        // pass = scanner.nextLine();
-
-        // userCred = new LogUser(num, pass);
-        // System.out.println(userCred);
-        // System.out.println("token is " + lb.Login(userCred));
-        // app.setToken(lb.Login(userCred));
+        Scanner scanner = new Scanner(System.in);
+        String userName, password;
+        System.out.print("Enter your username : ");
+        userName = scanner.nextLine();
+        System.out.print("Enter your password : ");
+        password = scanner.nextLine();
+        LogUser user = new LogUser(userName, password);
+        app.setToken(lb.Login(user));
+        if (app.token == null)
+            System.out.print("Invalid username or password");
+        else
+            System.out.print("Logged in successfully");
     }
 
 }
