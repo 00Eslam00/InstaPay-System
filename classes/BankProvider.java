@@ -1,6 +1,5 @@
 package classes;
 
-import enums.AccountType;
 import enums.PaymentStat;
 import models.UserProvider;
 
