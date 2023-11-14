@@ -46,7 +46,6 @@ public class UserController implements RegisterBehavior, LoginBehavior {
             if (code.equals("1234")) {
                 db.addUser(user);
                 states[stateId] = RegestrationStat.DONE;
-                db.addUser(user);
             } else
                 states[stateId] = RegestrationStat.WORNG_CODE;
         }
