@@ -24,22 +24,37 @@ public class PayBillPage extends Page {
         Scanner in = new Scanner(System.in);
         String option = in.nextLine().toUpperCase();
 
-        BillType type = BillType.valueOf(option);
-
-
-        Bill myBill=gb.getBillDetails(type,app.token);
-        System.out.println(myBill.getBillContent());
-
-        System.out.println("Do you want to pay? press Y");
-        String confirmation = in.nextLine().toUpperCase();
-        if (confirmation.equals("Y")){
-            BillStat state=pb.payBill(app.token,myBill,type);
-
+        BillType type;
+        try {
+            type = BillType.valueOf(option);
+        } catch (Exception e) {
+            System.out.println("unsupported bill type");
+            return;
         }
 
+        Bill myBill = gb.getBillDetails(type, app.token);
 
+        if (myBill == null) {
+            System.out.println("there are no bills");
+            return;
+        }
+        System.out.println(myBill.getBillContent());
 
+        System.out.println("Do you want to pay? press y");
+        String confirmation = in.nextLine().toUpperCase();
+        if (confirmation.equals("Y")) {
+            BillStat state = pb.payBill(app.token, myBill, type);
+            switch (state) {
+                case PAID:
+                    System.out.println("bill has been paid successfully");
+                    break;
+                case NOT_ENOUGH_MONEY:
+                    System.out.println("sorry your balance not enough to pay");
+                default:
+                    break;
+            }
 
+        }
 
     }
 }

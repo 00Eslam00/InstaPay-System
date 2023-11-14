@@ -39,15 +39,16 @@ public class DataBaseV1 extends DataBaseRepo {
         dummyWaterBillBills.add(new WaterBill(123, "01012345678", LocalDateTime.of(2022, 11, 2, 11, 12)));
 
         dummyUsersProvider.add(new UserProvider("01212345678", AccountType.BANK, 3000));
-        dummyUsersProvider.add(new UserProvider("01012345678", AccountType.WALLLET, 300));
-        dummyUsersProvider.add(new UserProvider("01012335678", AccountType.WALLLET, 600));
+        dummyUsersProvider.add(new UserProvider("01012345678", AccountType.WALLET, 300));
+        dummyUsersProvider.add(new UserProvider("01012335678", AccountType.WALLET, 600));
+        dummyUsersProvider.add(new UserProvider("01012335679", AccountType.WALLET, 700));
         dummyUsersProvider.add(new UserProvider("01112345678", AccountType.BANK, 1000));
 
         dummyUsers.add(new User("01212345678", "test", AccountType.BANK, "ayhaga@gmail.com", "password"));
-        dummyUsers.add(new User("01012335678", "test3", AccountType.WALLLET, "ayhaga@gmail.com", "password"));
+        dummyUsers.add(new User("01012335678", "test3", AccountType.WALLET, "ayhaga1@gmail.com", "password"));
 
         dummyUsers
-                .add(new User("01012345678", "test2", AccountType.WALLLET, "ayhaga2@gmail.com", "password2"));
+                .add(new User("01012345678", "test2", AccountType.WALLET, "ayhaga2@gmail.com", "password2"));
 
     }
 

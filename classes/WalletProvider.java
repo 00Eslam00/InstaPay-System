@@ -8,7 +8,7 @@ public class WalletProvider extends MoneyProvider {
 
     @Override
     public PaymentStat transferMoney(UserProvider src, UserProvider dest, double amount) {
-        if (dest.accountType == AccountType.WALLLET) {
+        if (dest.accountType == AccountType.WALLET) {
             if (src.balance >= amount) {
                 return PaymentStat.DONE;
             }

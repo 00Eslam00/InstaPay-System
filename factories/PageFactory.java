@@ -9,6 +9,7 @@ import repository.DataBaseRepo;
 import repository.DataBaseV1;
 import views.BalancePage;
 import views.LoginPage;
+import views.LogoutPage;
 import views.NotFoundPage;
 import views.Page;
 import views.PayBillPage;
@@ -40,6 +41,9 @@ public class PageFactory {
             if (pageName.equals("money"))
                 return new TransferMoneyPage(new MoneyController(db));
 
+            if (pageName.equals("logout"))
+                return new LogoutPage();
+
         } else {
             if (pageName.equals("signup"))
                 return new RegisterationPage(new UserController(db));
@@ -58,6 +62,7 @@ public class PageFactory {
             options.add("(balance) show your balance");
             options.add("(bills) pay bills your balance");
             options.add("(money) transfer money  your balance");
+            options.add("(logout) logout from this account");
         } else {
             options.add("(signup) create new account");
             options.add("(login) login with your account");

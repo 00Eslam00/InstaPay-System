@@ -12,7 +12,7 @@ public class ProviderFactory {
         switch (srcProvider.accountType) {
             case BANK:
                 return new BankProvider();
-            case WALLLET:
+            case WALLET:
                 return new WalletProvider();
             default:
                 return null;
