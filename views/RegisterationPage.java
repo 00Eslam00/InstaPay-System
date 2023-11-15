@@ -12,7 +12,7 @@ import java.util.Scanner;
  * Represents a page for user registration in the InstaPay application.
  * Extends the Page class and uses a RegisterBehavior implementation for user registration.
  */
-public class RegistrationPage extends Page {
+public class RegisterationPage  extends Page {
 
     private RegisterBehavior re;
 
@@ -21,7 +21,7 @@ public class RegistrationPage extends Page {
      *
      * @param re The RegisterBehavior implementation used for user registration.
      */
-    public RegistrationPage(RegisterBehavior re) {
+    public RegisterationPage (RegisterBehavior re) {
         this.re = re;
     }
 
