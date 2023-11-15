@@ -1,7 +1,14 @@
 package views;
 
+/**
+ * Represents a page displayed when a requested page is not found in the InstaPay application.
+ * Extends the Page class and provides a visually distinctive message.
+ */
 public class NotFoundPage extends Page {
 
+    /**
+     * Displays the not found page with a visually distinctive message.
+     */
     @Override
     public void show() {
         System.out.println(" _  _    ___  _  _     _   _       _     _____                     _ ");
