@@ -12,6 +12,10 @@ import enums.BillType;
 import models.User;
 import models.UserProvider;
 
+/**
+ * Implementation of a simple in-memory database for user and bill information.
+ * The database contains dummy data for testing purposes.
+ */
 public class DataBaseV1 extends DataBaseRepo {
 
     private LinkedList<Bill> dummyGasBill = new LinkedList<Bill>();
@@ -22,6 +26,11 @@ public class DataBaseV1 extends DataBaseRepo {
 
     private static DataBaseV1 db = null;
 
+    /**
+     * Gets the singleton instance of the database.
+     *
+     * @return The singleton instance of the database.
+     */
     public static DataBaseV1 getDB() {
         if (db == null) {
             db = new DataBaseV1();
