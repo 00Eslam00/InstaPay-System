@@ -58,7 +58,7 @@ public class RegisterationPage  extends Page {
             for (RegestrationStat r : states) {
                 if (r == RegestrationStat.INVALID_NUMBER)
                     System.out.println("Incorrect mobile number");
-                else if (r == RegestrationStat.USERNAME_EXISTS)
+                else if (r == RegestrationStat.USERNAME_EXSITS)
                     System.out.println("Username already exists");
                 else if (r == RegestrationStat.NOT_EXISTING_NUMBER)
                     System.out.println("This number doesn't contain " + accountType.toString() + " Account");

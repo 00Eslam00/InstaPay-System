@@ -9,7 +9,7 @@ package enums;
  * - USERNAME_EXISTS: The specified username is already taken.
  * - WRONG_CODE: The verification code provided is incorrect.
  */
-public enum RegestrationStat {
+public enum RegestrationStat  {
     /**
      * The registration process has been successfully completed.
      */
@@ -28,7 +28,7 @@ public enum RegestrationStat {
     /**
      * The specified username is already taken.
      */
-    USERNAME_EXISTS,
+    USERNAME_EXSITS,
 
     /**
      * The verification code provided is incorrect.
